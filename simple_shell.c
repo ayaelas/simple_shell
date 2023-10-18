@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * child - function
+ * @cmd_path : command path
+ * @args : arguments
+ */
 void child(char *cmd_path, char **args)
 {
 	if (execve(cmd_path, args, NULL) == -1)
@@ -12,6 +17,14 @@ void child(char *cmd_path, char **args)
 	exit(0);
 }
 
+/*
+ * parent - function
+ * @id : id
+ * @status : state
+ * @cmd_path : command path
+ * @args : arguments
+ * Return
+ */
 void parent(int id, int *status, char *cmd_path, char **args)
 {
 	if (waitpid(id, status, 0) == -1)
