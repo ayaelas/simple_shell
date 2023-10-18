@@ -57,13 +57,13 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 
 		counter++;
 		cmd_path = check_path(args[0], env);
-		if (_strcmp(args[0], "exit") == 0 && cmd_path)
+		if (_strcmp(args[0], "exit") == 0)
 		{
 			arr_free(args);
 			free(cmd_path);
 			exit(status);
 		}
-		else if (_strcmp(args[0], "env") == 0 && cmd_path)
+		else if (_strcmp(args[0], "env") == 0)
 		{
 			_env(env);
 			arr_free(args);
