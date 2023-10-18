@@ -17,13 +17,12 @@ void child(char *cmd_path, char **args)
 	exit(0);
 }
 
-/*
+/**
  * parent - function
  * @id : id
  * @status : state
  * @cmd_path : command path
  * @args : arguments
- * Return
  */
 void parent(int id, int *status, char *cmd_path, char **args)
 {
